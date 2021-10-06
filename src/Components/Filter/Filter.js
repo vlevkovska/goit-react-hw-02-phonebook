@@ -10,7 +10,7 @@ const Filter = ({ filter, onChangeFilter }) => {
         type="text"
         name="filter"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Введите имя контакта. Поиск не чувствительный к регистру вводимых символов."
+        title="Enter the contact's name. Search is not sensitive to input characters."
         required
         onChange={onChangeFilter}
         value={filter}

@@ -36,33 +36,33 @@ class ContactForm extends React.Component {
     return (
       <form className={s.form} onSubmit={this.handleSubmit}>
         <label className={s.label}>
-          Name
+          Enter name
           <input
             className={s.input}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+            title="The name can only contain letters, apostrophe, dash and spaces. For example: Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan etc."
             required
             onChange={this.handleChange}
             value={this.state.name}
           />
         </label>
         <label className={s.label}>
-          Number
+          Enter number
           <input
             className={s.input_number}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+            title="The phone number can consist of numerals, spaces, dashes, brackets and start with +"
             required
             onChange={this.handleChange}
             value={this.state.number}
           />
         </label>
         <button className={s.button} type="submit">
-          Add contact
+          Save
         </button>
       </form>
     );

@@ -9,5 +9,5 @@
 
 .input:hover,
 .input:focus {
-  border: 1px solid limegreen;
+  border: 1px solid rgba(0, 0, 0, 0.07);
 }
