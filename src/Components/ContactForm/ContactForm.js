@@ -4,6 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import s from './ContactForm.module.css';
 
 class ContactForm extends React.Component {
+  static propTypes = {
+    onSubmit: PropTypes.func,
+  };
+
   state = {
     name: '',
     number: '',
@@ -68,9 +72,5 @@ class ContactForm extends React.Component {
     );
   }
 }
-
-ContactForm.protoType = {
-  onSubmit: PropTypes.func,
-};
 
 export default ContactForm;

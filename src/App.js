@@ -25,17 +25,19 @@ class App extends React.Component {
 
   deleteContact = currentId => {
     this.setState(prevState => {
-      let indx = null;
-
-      for (let i = 0; i < prevState.contacts.length; i += 1) {
-        if (prevState.contacts[i].id === currentId) {
-          indx = i;
-        }
-      }
-
-      prevState.contacts.splice(indx, 1);
-
-      return { contacts: [...prevState.contacts] };
+      return {
+        contacts: [
+          ...prevState.contacts.filter(contact => contact.id !== currentId),
+        ],
+      };
+      // let indx = null;
+      // for (let i = 0; i < prevState.contacts.length; i += 1) {
+      //   if (prevState.contacts[i].id === currentId) {
+      //     indx = i;
+      //   }
+      // }
+      // prevState.contacts.splice(indx, 1);
+      // return { contacts: [...prevState.contacts] };
     });
   };
 
