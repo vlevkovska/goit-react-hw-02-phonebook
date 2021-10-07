@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import ce from './ContactElement.module.css';
 
 const ContactsEl = ({ name, number, id, onDeleteContact }) => (
-  <li className={ce.box}>
+  <p className={ce.box}>
     <span>{name}:</span>
     <span>{number}</span>
     <button
@@ -12,10 +12,10 @@ const ContactsEl = ({ name, number, id, onDeleteContact }) => (
     >
       Remove
     </button>
-  </li>
+  </p>
 );
 ContactsEl.propTypes = {
-  onDeleteContact: PropTypes.func,
+  onDeleteContact: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
 };
